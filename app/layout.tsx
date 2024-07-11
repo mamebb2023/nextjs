@@ -4,8 +4,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 
-import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,7 +16,7 @@ const inter = Inter({
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-grotesk",
+  variable: "--font-spaceGrotesk",
 });
 
 export const metadata: Metadata = {
