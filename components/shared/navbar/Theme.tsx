@@ -45,9 +45,9 @@ const Theme = () => {
               onClick={() => {
                 setMode(item.value);
                 if (item.value !== "system") {
-                  localStorage.item = item.value;
+                  localStorage.theme = item.value;
                 } else {
-                  localStorage.removeItem("item");
+                  localStorage.removeItem("theme");
                 }
               }}
             >
