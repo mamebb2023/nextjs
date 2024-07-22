@@ -6,50 +6,50 @@ import RenderTag from "./RenderTag";
 const RightSideBar = () => {
   const questions = [
     {
-      _id: 0,
+      _id: "0",
       title: "How to create a new project in Figma?",
     },
     {
-      _id: 1,
+      _id: "1",
       title: "How do I add a new member to my team in Figma?",
     },
     {
-      _id: 2,
+      _id: "2",
       title: "How to create a new project in Figma?",
     },
     {
-      _id: 3,
+      _id: "3",
       title: "What is the difference between Figma and Sketch?",
     },
     {
-      _id: 4,
+      _id: "4",
       title: "When is the next Figma update?",
     },
   ];
 
   const tags = [
     {
-      _id: 0,
+      _id: "0",
       name: "vue",
       totalQuesitons: 5,
     },
     {
-      _id: 1,
+      _id: "1",
       name: "react",
       totalQuesitons: 2,
     },
     {
-      _id: 2,
+      _id: "2",
       name: "next",
       totalQuesitons: 4,
     },
     {
-      _id: 3,
+      _id: "3",
       name: "javascript",
       totalQuesitons: 6,
     },
     {
-      _id: 4,
+      _id: "4",
       name: "redux",
       totalQuesitons: 1,
     },

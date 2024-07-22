@@ -5,8 +5,70 @@ import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
 import Filter from "@/components/shared/Filter";
 import { HomePageFilters } from "@/constants/filters";
 import HomeFilters from "@/components/home/HomeFilters";
+import NoResult from "@/components/shared/NoResult";
+import QuestionCard from "@/components/cards/QuestionCard";
 
 export default function Home() {
+  const questions = [
+    {
+      _id: "q101",
+      title: "What's new in React 18?",
+      tags: [
+        { _id: "t101", name: "React" },
+        { _id: "t102", name: "JavaScript" },
+      ],
+      author: {
+        _id: "a101",
+        name: "Alex Johnson",
+        picture: "/assets/icons/avatar.svg",
+        clerkId: "c101",
+      },
+      upvotes: 45,
+      views: 300,
+      answers: [],
+      createdAt: new Date("2023-04-10"),
+      clerkId: "c101",
+    },
+    {
+      _id: "q102",
+      title: "How to manage state in Flutter?",
+      tags: [
+        { _id: "t103", name: "Flutter" },
+        { _id: "t104", name: "Mobile Development" },
+      ],
+      author: {
+        _id: "a102",
+        name: "Bethany Smith",
+        picture: "/assets/icons/avatar.svg",
+        clerkId: "c102",
+      },
+      upvotes: 33,
+      views: 150,
+      answers: [],
+      createdAt: new Date("2023-04-11"),
+      clerkId: null,
+    },
+    {
+      _id: "q103",
+      title: "Best practices for REST API design?",
+      tags: [
+        { _id: "t105", name: "API Design" },
+        { _id: "t106", name: "Best Practices" },
+      ],
+      author: {
+        _id: "a103",
+        name: "Charlie Brown",
+        picture: "/assets/icons/avatar.svg",
+        clerkId: "c103",
+      },
+      upvotes: 99,
+      views: 220,
+      answers: [],
+      createdAt: new Date("2023-04-12"),
+      clerkId: "c103",
+    },
+  ];
+
   return (
     <>
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
@@ -35,6 +97,30 @@ export default function Home() {
         />
       </div>
       <HomeFilters />
+      <div className="mt-10 flex w-full flex-col gap-6">
+        {questions.length > 0 ? (
+          questions.map((question) => (
+            <QuestionCard
+              key={question._id}
+              _id={question._id}
+              title={question.title}
+              tags={question.tags}
+              author={question.author}
+              upvotes={question.upvotes}
+              views={question.views}
+              answers={question.answers}
+              createdAt={question.createdAt}
+            />
+          ))
+        ) : (
+          <NoResult
+            title="No Questions Found"
+            description="No questions found. Please try again later."
+            link="/ask-question"
+            linkTitle="Ask a Question"
+          />
+        )}
+      </div>
     </>
   );
 }

@@ -4,7 +4,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 
 interface Props {
-  _id: number;
+  _id: string;
   name: string;
   totalQuesitons?: number;
   showCount?: boolean;
