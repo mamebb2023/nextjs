@@ -3,10 +3,16 @@ import {
   createRouteMatcher
 } from '@clerk/nextjs/server';
 
+// Define public routes
+const isPublic = createRouteMatcher(['/api/webhook']);
+
+// Define protected routes
 const isProtectedRoute = createRouteMatcher([]);
 
 export default clerkMiddleware((auth, req) => {
-  if (isProtectedRoute(req)) auth().protect();
+  if (isProtectedRoute(req) && !isPublic(req)) {
+   auth().protect();
+  }
 }, { debug: true });
 
 export const config = {
