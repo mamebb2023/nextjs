@@ -4,13 +4,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "*",
       },
       {
-        protocol: "https",
-        hostname: "img.clerk.com",
+        protocol: "http",
+        hostname: "*",
       },
     ],
+  },
+  webpack(config) {
+    config.resolve.alias.tinymce = "tinymce/tinymce";
+    return config;
   },
 };
 

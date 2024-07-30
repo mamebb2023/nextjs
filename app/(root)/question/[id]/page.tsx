@@ -9,7 +9,6 @@ import React from "react";
 
 const Page = async ({ params, searchParams }: any) => {
   const result = await getQuestionById({ questionId: params.id });
-  console.log(result);
   return (
     <>
       <div className="flex-start w-full flex-col">
