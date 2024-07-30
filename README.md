@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f2de0b55-cf95-4838-a327-6ebd9ba853c1/deploy-status)](https://app.netlify.com/sites/devflow-nextjs/deploys)<br>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2de0b55-cf95-4838-a327-6ebd9ba853c1/deploy-status)](https://netlify.com/)<br />
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
