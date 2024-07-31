@@ -1,3 +1,4 @@
+import Answer from "@/components/forms/Answer";
 import Metric from "@/components/shared/Metric";
 import ParseHTML from "@/components/shared/ParseHTML";
 import RenderTag from "@/components/shared/RenderTag";
@@ -90,12 +91,13 @@ const Page = async ({ params, searchParams }: any) => {
         page={searchParams?.page}
         filter={searchParams?.filter}
       />
+       */}
 
-      <Answer 
+      <Answer
         question={result.content}
         questionId={JSON.stringify(result._id)}
-        authorId={JSON.stringify(mongoUser._id)}
-      /> */}
+        // authorId={JSON.stringify(mongoUser._id)}
+      />
     </>
   );
 };

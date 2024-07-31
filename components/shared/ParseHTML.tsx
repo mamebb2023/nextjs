@@ -6,6 +6,7 @@ import Prism from "prismjs";
 import parse from "html-react-parser";
 
 import "prismjs/components/prism-markup";
+import "prismjs/components/prism-cshtml";
 import "prismjs/components/prism-css";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-typescript";
@@ -48,6 +49,9 @@ const ParseHTML = ({ data }: Props) => {
   useEffect(() => {
     Prism.highlightAll(true);
   }, []);
+
+  console.log(parse(data));
+
   return <div>{parse(data)}</div>;
 };
 
