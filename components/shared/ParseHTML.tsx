@@ -50,7 +50,7 @@ const ParseHTML = ({ data }: Props) => {
     Prism.highlightAll(true);
   }, []);
 
-  console.log(parse(data));
+  console.log(data);
 
   return <div>{parse(data)}</div>;
 };
