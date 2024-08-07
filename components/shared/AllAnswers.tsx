@@ -6,6 +6,7 @@ import Image from "next/image";
 import ParseHTML from "./ParseHTML";
 import { getTimestamp } from "@/lib/utils";
 import Filter from "./Filter";
+import Votes from "./Votes";
 // import Votes from "./Votes";
 // import Pagination from "./Pagination";
 
@@ -59,12 +60,12 @@ const AllAnswers = async ({
                   </p>
 
                   <p className="small-regular text-light400_light500 ml-0.5 mt-0.5 line-clamp-1">
-                    answered {getTimestamp(answer.createdAt)}
+                    - answered {getTimestamp(answer.createdAt)}
                   </p>
                 </div>
               </Link>
               <div className="flex justify-end">
-                {/* <Votes
+                <Votes
                   type="Answer"
                   itemId={JSON.stringify(answer._id)}
                   userId={JSON.stringify(userId)}
@@ -72,7 +73,7 @@ const AllAnswers = async ({
                   hasupVoted={answer.upvotes.includes(userId)}
                   downvotes={answer.downvotes.length}
                   hasdownVoted={answer.downvotes.includes(userId)}
-                /> */}
+                />
               </div>
             </div>
             <ParseHTML data={answer.content} />
